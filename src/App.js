@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 import Header from "./components/Header";
 import HomeScreen from "./screens/HomeScreen";
@@ -18,15 +18,15 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter>
+      <Router>
         <div className={classes.app}>
           <Header />
           <Switch>
-            <Route path="/" component={HomeScreen} exact></Route>
-            <Route path="/coins/:id" component={CoinScreen} exact></Route>
+            <Route path="/" component={HomeScreen} exact />
+            <Route path="/coins/:id" component={CoinScreen} exact />
           </Switch>
         </div>
-      </HashRouter>
+      </Router>
     </div>
   );
 }
